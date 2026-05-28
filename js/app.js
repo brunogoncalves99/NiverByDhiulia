@@ -17,3 +17,13 @@ if (whatsappButton && nameInput) {
     window.open(whatsappUrl, '_blank');
   });
 }
+
+document.querySelectorAll('.side-square[src$=".gif"]').forEach(gif => {
+  const src = gif.getAttribute('src');
+  const gifDuration = 4000; 
+
+  setInterval(() => {
+    gif.src = '';
+    gif.src = src;
+  }, gifDuration);
+});

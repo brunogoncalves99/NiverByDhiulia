@@ -498,30 +498,44 @@ h1{
 
 @media(max-width:600px){
 
+  body{
+    padding:0;
+    align-items:flex-start;
+  }
+
   .convite{
     width:100%;
-    height:auto;
     min-height:100vh;
+    border-radius:0;
+  }
+
+  .content{
+    padding:80px 20px 40px;
   }
 
   h1{
-    font-size:92px;
+    font-size:clamp(56px, 16vw, 88px);
+    margin-top:-30px;
   }
 
-  .date h2{
-    font-size:58px;
+  .idade span{
+    width:36px;
+    height:46px;
+    font-size:24px;
   }
 
-  .date p{
-    font-size:34px;
+  .paper-band{
+    top:440px;
   }
 
   .event-cards{
     grid-template-columns:1fr;
+    gap:12px;
+    margin-top:28px;
   }
 
   .event-card{
-    padding:20px 16px;
+    padding:18px 16px;
   }
 
   .event-number{
@@ -529,11 +543,59 @@ h1{
   }
 
   .event-card h3{
-    font-size:30px;
+    font-size:28px;
+  }
+
+  .command-row{
+    gap:10px;
+    padding:6px 0;
+  }
+
+  .side-square{
+    width:76px;
+    height:76px;
+  }
+
+  .side-square.left{
+    margin-left:-6px;
+  }
+
+  .side-square.right{
+    margin-right:-6px;
+  }
+
+  .command-text{
+    font-size:13px;
+    letter-spacing:.16em;
   }
 
   .whatsapp-panel input,
   .whatsapp-panel button{
     max-width:100%;
+  }
+
+  .butterfly{
+    font-size:38px;
+  }
+
+  .b1{
+    left:10px;
+    top:500px;
+  }
+
+  .b2{
+    right:10px;
+    top:480px;
+  }
+
+  .s1{ top:130px; left:14px; }
+  .s2{ top:115px; right:14px; }
+  .s3{ top:240px; left:10px; }
+  .s4{ top:215px; right:10px; }
+  .s5{ top:285px; right:14px; }
+
+  .frame{
+    width:96%;
+    top:20px;
   }
 }
