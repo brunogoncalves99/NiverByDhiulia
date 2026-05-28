@@ -95,12 +95,6 @@ body{
   display: block;
 }
 
-.message{
-  margin-top:10px;
-  font-size:20px;
-  color:#7c3a28;
-}
-
 .paper-band{
   position:absolute;
   top:470px;
@@ -342,8 +336,64 @@ h1{
   display:block;
 }
 
+/* linha com imagens laterais (quadrados) e texto central */
+.command-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding:6px 12px; /* menos padding para aproximar das bordas */
+  margin-top:12px;
+}
+
+.side-square{
+  width:96px; 
+  height:96px;
+  object-fit:contain;
+  border-radius:0; 
+  background:none; 
+  box-shadow:none;
+  display:block;
+}
+
+.side-square.left{
+  margin-left:-18px; 
+}
+
+.side-square.right{
+  margin-right:-18px; 
+}
+
+.side-square{
+  position:relative;
+  z-index:3; 
+  filter:drop-shadow(0 10px 20px rgba(0,0,0,0.12));
+  animation: float 4s ease-in-out infinite;
+}
+
+.side-square.left{
+  animation-duration:4s;
+  animation-delay:0s;
+}
+
+.side-square.right{
+  animation-duration:4.6s;
+  animation-delay:0.4s;
+}
+
+.command-text{
+  font-family:'Poppins',sans-serif;
+  flex:1;
+  text-align:center;
+  color:#7c3a28;
+  font-size:16px;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  margin-top:10px;
+}
+
 .whatsapp-panel{
-  margin-top:80px;
+  margin-top:24px;
   display:flex;
   flex-direction:column;
   gap:14px;
